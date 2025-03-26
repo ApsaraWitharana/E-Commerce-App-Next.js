@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 let cached = global.mongoose;
 
@@ -15,9 +17,20 @@ async function connectDB() {
     if (!cached.promise) {
         const opts = {
             bufferCommands: false,
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
         };
 
-        cached.promise = mongoose.connect(`${process.env.MONGODB_URI}/quickcart`, opts).then((mongoose) => mongoose);
+        cached.promise = mongoose
+            .connect(process.env.MONGODB_URI, opts)
+            .then((mongoose) => {
+                console.log("MongoDB Connected!");
+                return mongoose;
+            })
+            .catch((error) => {
+                console.error(" MongoDB Connection Error:", error);
+                process.exit(1);
+            });
     }
 
     cached.conn = await cached.promise;

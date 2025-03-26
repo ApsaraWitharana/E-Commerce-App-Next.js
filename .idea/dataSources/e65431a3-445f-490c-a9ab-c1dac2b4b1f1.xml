@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.49">
+    <root id="1">
+      <ServerVersion>7.0.14</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin">
+      <LocalIntrospectionTimestamp>2025-03-26.10:04:00</LocalIntrospectionTimestamp>
+    </schema>
+    <schema id="3" parent="1" name="config"/>
+    <schema id="4" parent="1" name="ecommerce_microservice_nodejs"/>
+    <schema id="5" parent="1" name="local"/>
+    <schema id="6" parent="1" name="taskdb"/>
+    <schema id="7" parent="1" name="test">
+      <Current>1</Current>
+      <LocalIntrospectionTimestamp>2025-03-26.10:04:00</LocalIntrospectionTimestamp>
+    </schema>
+    <schema id="8" parent="1" name="to"/>
+    <schema id="9" parent="1" name="todo"/>
+    <schema id="10" parent="1" name="todo_list"/>
+    <schema id="11" parent="1" name="travel-management"/>
+    <table id="12" parent="7" name="todos"/>
+  </database-model>
+</dataSource>
