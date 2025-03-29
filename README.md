@@ -18,23 +18,6 @@ This is a full-stack e-commerce application built using **Node.js**, **MongoDB**
 - **Authentication**: Clerk
 - **Event Handling**: Inngest
 
-## 📂 Folder Structure
-```bash
-.
-├── backend
-│   ├── models
-│   ├── routes
-│   ├── controllers
-│   ├── config
-│   ├── server.js
-├── frontend
-│   ├── src
-│   ├── components
-│   ├── pages
-│   ├── App.js
-│   ├── index.js
-```
-
 ## ⚙️ Installation & Setup
 1. Clone the repository:
    ```sh
